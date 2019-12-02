@@ -1,4 +1,4 @@
-# ebook
+# ebook - Development
 This is a demo project on laravel.
 # Description:
 This is an Ecommerce site on Laravel 5.5
