@@ -32,10 +32,10 @@
                       <a href="{{ url('/admin/profile') }}" class="btn btn-default btn-block">Profile</a>
                     </div>
                     <div style="margin-top:1rem; margin-bottom:1rem;" class="col-md-6 col-md-offset-3">
-                      <a class="btn btn-default btn-block" href="{{ url('/admin/logout') }}"
+                      <a class="btn btn-default btn-block" href=""
                       onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">Logout</a>
-                      <form id="logout-form" action="{{ url('/admin/logout') }}" method="POST" style="display: none;">
+                      <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form>
                     </div>

@@ -105,12 +105,6 @@ class PagesController extends Controller
         return view('pages.profile', compact('orders'));
     }
     
-    // Wishlist Page
-    public function showWishList()
-    {
-       return view('pages.wish-list');
-    }
-    
     // Change Password Page
     public function showChangePassword()
     {

@@ -156,7 +156,7 @@
                                     <div class="switcher-currency">
                                         <strong class="label switcher-label">
                                             
-                                            <a href="{{ route('myWishList')}}"><i class="fa fa-heart"></i> My Wishlist</a>
+                                            <a href="{{ route('wishlist.index')}}"><i class="fa fa-heart"></i> My Wishlist</a>
                                         </strong>
                                         <strong class="label switcher-label">
                                             
