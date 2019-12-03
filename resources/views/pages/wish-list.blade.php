@@ -30,39 +30,63 @@
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th class="product-remove"></th>
+                                                <th class="">#</th>
                                                 <th class="product-thumbnail"></th>
                                                 <th class="product-name"><span class="nobr">Product Name</span></th>
                                                 <th class="product-price"><span class="nobr"> Unit Price </span></th>
                                                 <th class="product-stock-stauts"><span class="nobr"> Stock Status </span></th>
                                                 <th class="product-add-to-cart"></th>
+                                                <th class="product-remove"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @php
+                                                $count = 0;
+                                            @endphp
+                                            @foreach ($wishlists as $wish)
+                                                
                                             <tr>
-                                                <td class="product-remove"><a href="#">×</a></td>
+                                                <td class="product-remove">
+                                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                                        {{ ++$count }}
+                                                </td>
                                                 <td class="product-thumbnail"><a href="#"><img src="/storage/images/product/sm-3/1.jpg" alt=""></a></td>
-                                                <td class="product-name"><a href="#">Natoque penatibus</a></td>
-                                                <td class="product-price"><span class="amount">$165.00</span></td>
-                                                <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td>
-                                                <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
+                                                <td class="product-name">
+                                                    <a href="#">
+                                                        {{$wish->book->name}}
+                                                    </a>
+                                                </td>
+                                                <td class="product-price">
+                                                    <span class="amount">
+                                                        {{number_format($wish->book->price, 2)}}
+                                                    </span>
+                                                </td>
+                                                <td class="product-stock-status">
+                                                    <span class="wishlist-in-stock">
+                                                        {{($wish->book->quantity > 0 )?  "In ": "Out Of "}}Stock
+                                                    </span>
+                                                </td>
+                                                <td class="product-add-to-cart">
+                                                    @if ($wish->book->quantity > 0)
+                                                    <a href="#"> Move to Cart</a>
+                                                    @endif
+                                                </td>
+                                                <td class="product-remove">
+                                                    <a href="#" class="text-danger">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </td>
                                             </tr>
+                                            @endforeach
+                                            @if (count($wishlists) < 0)
+                                                
                                             <tr>
-                                                <td class="product-remove"><a href="#">×</a></td>
-                                                <td class="product-thumbnail"><a href="#"><img src="/storage/images/product/sm-3/2.jpg" alt=""></a></td>
-                                                <td class="product-name"><a href="#">Quisque fringilla</a></td>
-                                                <td class="product-price"><span class="amount">$50.00</span></td>
-                                                <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td>
-                                                <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
+                                                <td colspan="7">
+                                                    <p class="lead text-center"> No Data Found. Please add some books in the wishlist.</p>
+                                                </td>
                                             </tr>
-                                            <tr>
-                                                <td class="product-remove"><a href="#">×</a></td>
-                                                <td class="product-thumbnail"><a href="#"><img src="/storage/images/product/sm-3/3.jpg" alt=""></a></td>
-                                                <td class="product-name"><a href="#">Quisque fringilla</a></td>
-                                                <td class="product-price"><span class="amount">$65.00</span></td>
-                                                <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td>
-                                                <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
-                                            </tr>
+                                            @endif
+
                                         </tbody>
                                     </table>
                                 </div>  

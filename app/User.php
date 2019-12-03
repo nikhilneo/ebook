@@ -36,4 +36,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Cart', 'user_id', 'id');
     }
+    
+    public function Wishlists()
+    {
+        return $this->hasMany('App\Wishlist', 'user_id', 'id');
+    }
 }

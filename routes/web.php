@@ -55,13 +55,14 @@ Route::group(['middleware' => ['auth']], function () {
   
     Route:: put('/change-password', 'PagesController@editChangePassword')->name('changePassword');
     Route:: get('/change-password', 'PagesController@showChangePassword')->name('changePassword');
-    Route:: get('/wish-list', 'PagesController@showWishList')->name('myWishList');
+    //Route:: get('/wish-list', 'WishlistController@index')->name('myWishList');
     Route:: get('/my-profile', 'PagesController@showProfile')->name('myProfile');
     Route:: get('/paypal-request', 'PayPalController@requestCheckOut')->name('paypal.checkout');
     Route:: get('/order-success', 'CartController@createOrder')->name('create.order');
     Route:: get('/order-detail/{id}', 'PagesController@orderDetails')->name('show.cart.details');
     Route:: get('/paypal-success', 'PayPalController@responseCheckOut');
     Route:: get('/paypal-cancel', 'PayPalController@cancelCheckOut');
+    Route:: resource('wishlist', 'WishlistController')->except(['create', 'edit', 'update', 'show']);
 });
 
 // This route only accessed by loggedOut users

@@ -16,8 +16,14 @@ class Book extends Model
     {
         return $this->hasOne('App\Admin', 'id', 'admin_id');
     }
+    
     public function carts()
     {
         return $this->hasMany('App\Cart', 'book_id', 'id');
+    }
+
+    public function Wishlists()
+    {
+        return $this->hasMany('App\Wishlist', 'book_id', 'id');
     }
 }
