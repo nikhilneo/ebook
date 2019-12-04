@@ -81,25 +81,6 @@
 										<li>USD {{ number_format($book->price, 2) }}</li>
 										{{-- <li class="old_prize">$35.00</li> --}}
 									</ul>
-									<div class="action">
-										<div class="actions_inner">
-											<ul class="add_to_links">
-												<li><a class="cart" href="/pages/cart"><i class="bi bi-shopping-bag4"></i></a></li>
-												<li><a class="wishlist" href="/pages/wishlist"><i class="bi bi-shopping-cart-full"></i></a></li>
-												{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li> --}}
-												{{-- <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#"><i class="bi bi-search"></i></a></li> --}}
-											</ul>
-										</div>
-									</div>
-									{{-- <div class="product__hover--content">
-										<ul class="rating d-flex">
-											<li class="on"><i class="fa fa-star-o"></i></li>
-											<li class="on"><i class="fa fa-star-o"></i></li>
-											<li class="on"><i class="fa fa-star-o"></i></li>
-											<li><i class="fa fa-star-o"></i></li>
-											<li><i class="fa fa-star-o"></i></li>
-										</ul>
-									</div> --}}
 								</div>
 							</div>
 						</div>
@@ -129,8 +110,6 @@
 							@for ($i = 0, $count = count($allBooks); $i < $count; $i+=2)
 							<div class="single__product">
 								@for ($j = $i,$jCout = 0; $jCout <2 ; $jCout++, $j++)
-									
-
 										<!-- Start Single Product -->
 										<div class="col-lg-3 col-md-4 col-sm-6 col-12">
 											<div class="product product__style--3">
@@ -151,25 +130,6 @@
 														<li>USD {{ number_format($allBooks[$j]->price, 2) }}</li>
 														{{-- <li class="old_prize">$35.00</li> --}}
 													</ul>
-													<div class="action">
-														<div class="actions_inner">
-															<ul class="add_to_links">
-																<li><a class="cart" href="/pages/cart"><i class="bi bi-shopping-bag4"></i></a></li>
-																<li><a class="wishlist" href="/pages/wishlist"><i class="bi bi-shopping-cart-full"></i></a></li>
-																{{-- <li><a class="compare" href="#"><i class="bi bi-heart-beat"></i></a></li> --}}
-																{{-- <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#"><i class="bi bi-search"></i></a></li> --}}
-															</ul>
-														</div>
-													</div>
-													{{-- <div class="product__hover--content">
-														<ul class="rating d-flex">
-															<li class="on"><i class="fa fa-star-o"></i></li>
-															<li class="on"><i class="fa fa-star-o"></i></li>
-															<li class="on"><i class="fa fa-star-o"></i></li>
-															<li><i class="fa fa-star-o"></i></li>
-															<li><i class="fa fa-star-o"></i></li>
-														</ul>
-													</div> --}}
 												</div>
 											</div>
 										</div>

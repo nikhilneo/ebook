@@ -192,36 +192,6 @@
                     <ul class="meninmenu">
                         <li><a href="{{url('/')}}">Home</a></li>
                         <li><a href="{{url('/about')}}">About Page</a></li>
-                        {{-- <li><a href="#">Pages</a>
-                            <ul>
-                                <li><a href="{{url('/about')}}">About Page</a></li>
-                                <li><a href="/portfolio">Portfolio</a>
-                                    <ul>
-                                        <li><a href="/portfolio">Portfolio</a></li>
-                                        <li><a href="/portfolio-details">Portfolio Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{url('/my-account')}}">My Account</a></li>
-                                <li><a href="{{url('/cart')}}">Cart Page</a></li>
-                                <li><a href="/checkout">Checkout Page</a></li>
-                                <li><a href="{{url('/wish-list')}}">Wishlist Page</a></li>
-                                <li><a href="/error404">404 Page</a></li>
-                                <li><a href="/faq">Faq Page</a></li>
-                                <li><a href="/team">Team Page</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{url('/shop-grid')}}">Shop</a>
-                            <ul>
-                                <li><a href="{{url('/shop-grid')}}">Shop Grid</a></li>
-                                <li><a href="/single-product">Single Product</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/blog">Blog</a>
-                            <ul>
-                                <li><a href="/blog">Blog Page</a></li>
-                                <li><a href="/blog-details">Blog Details</a></li>
-                            </ul>
-                        </li> --}}
                         <li><a href="{{url('/shop-grid')}}">Books</a></li>
                         <li><a href="{{url('/contact')}}">Contact</a></li>
                     </ul>

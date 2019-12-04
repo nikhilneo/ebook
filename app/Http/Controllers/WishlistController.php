@@ -24,16 +24,6 @@ class WishlistController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -41,41 +31,15 @@ class WishlistController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Wishlist  $wishlist
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Wishlist $wishlist)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Wishlist  $wishlist
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Wishlist $wishlist)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Wishlist  $wishlist
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Wishlist $wishlist)
-    {
-        //
+        $this->validate($request, [
+            'book_id' => 'required|numeric'
+        ]);
+        $wishlist = new Wishlist;
+        $wishlist->book_id = $request->book_id;
+        $wishlist->user_id = Auth::user()->id;
+        $wishlist->save();
+        Session:: flash('userSuccess', 'Book is added into your wishlist.');
+        return redirect()->route('books.view', $request->book_id);
     }
 
     /**
@@ -86,6 +50,8 @@ class WishlistController extends Controller
      */
     public function destroy(Wishlist $wishlist)
     {
-        //
+        $wishlist->delete();
+        Session::flash('userSuccess', 'Wishlist Deleted successfully');
+        return redirect(url()->previous());
     }
 }

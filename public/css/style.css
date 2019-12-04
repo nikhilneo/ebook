@@ -3734,7 +3734,7 @@ h3.widget-title-modal {
   color:#e59285;
 }
 	  .post__itam .content .post__time span {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   font-size: 13px;
   margin-bottom: 15px;
@@ -4116,10 +4116,17 @@ h3.widget-title-modal {
     background: #ffffff url("../storage/images/icons/button-compare.png") no-repeat scroll 0 0; }
   .product__info__main .product-addto-links a.email {
     background: #ffffff url("../storage/images/icons/button-email.png") no-repeat scroll 0 0; }
+  .product__info__main .product-addto-links a.active {
+    background-color: #e59285;
+    background-position: 100% center;
+    border-color: #e59285; }
   .product__info__main .product-addto-links a:hover {
     background-color: #e59285;
     background-position: 100% center;
     border-color: #e59285; }
+  .product__info__main .product-addto-links a.active:hover {
+    background: #ffffff url("../storage/images/icons/product-info.png") no-repeat scroll 0 0;
+    border-color: #ebebeb; }
 .product__info__main .product__overview {
   border-top: 1px solid #ebebeb;
   clear: both;
@@ -4676,7 +4683,7 @@ h3.widget-title-modal {
 }
   .gallery__menu button {
     background: #fff none repeat scroll 0 0;
-    color: color: #333;
+    color: #333;
     border: medium none;
     display: inline-block;
     font-size: 12px;
@@ -4752,7 +4759,7 @@ h3.widget-title-modal {
 	  border-width: 3px;
 	  clear: none;
 	  color: #ffffff;
-	  display: inline-block;
+	  /*display: inline-block;*/
 	  float: right;
 	  font-size: 16px;
 	  font-weight: 400;
@@ -5753,7 +5760,7 @@ a.checkout__title {
       .wedget__categories.poroduct--cat ul li a:hover {
         color: #e59285; }
       .wedget__categories.poroduct--cat ul li a span {
-        color: ##333;
+        color: #333;
         float: right; }
 .wedget__categories.pro--range {
   margin: 0 0 30px; }

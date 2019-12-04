@@ -17,9 +17,6 @@ class Wishlist extends Migration
             $table->increments('id');
             $table->integer('book_id')->unsigned();
             $table->foreign('book_id')->references('id')->on('books');
-            $table->integer('quantity')->unsigned();
-            $table->integer('price')->unsigned();
-            $table->integer('total')->unsigned();
             
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');

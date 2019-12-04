@@ -55,51 +55,6 @@
         							<li><a href="#">hoodies <span>(3)</span></a></li>
         						</ul>
         					</aside>
-        					{{-- <aside class="wedget__categories pro--range">
-        						<h3 class="wedget__title">Filter by price</h3>
-        						<div class="content-shopby">
-        						    <div class="price_filter s-filter clear">
-        						        <form action="#" method="GET">
-        						            <div id="slider-range"></div>
-        						            <div class="slider__range--output">
-        						                <div class="price__output--wrap">
-        						                    <div class="price--output">
-        						                        <span>Price :</span><input type="text" id="amount" readonly="">
-        						                    </div>
-        						                    <div class="price--filter">
-        						                        <a href="#">Filter</a>
-        						                    </div>
-        						                </div>
-        						            </div>
-        						        </form>
-        						    </div>
-        						</div>
-        					</aside> --}}
-        					{{-- <aside class="wedget__categories poroduct--tag">
-        						<h3 class="wedget__title">Product Tags</h3>
-        						<ul>
-        							<li><a href="#">Biography</a></li>
-        							<li><a href="#">Business</a></li>
-        							<li><a href="#">Cookbooks</a></li>
-        							<li><a href="#">Health & Fitness</a></li>
-        							<li><a href="#">History</a></li>
-        							<li><a href="#">Mystery</a></li>
-        							<li><a href="#">Inspiration</a></li>
-        							<li><a href="#">Religion</a></li>
-        							<li><a href="#">Fiction</a></li>
-        							<li><a href="#">Fantasy</a></li>
-        							<li><a href="#">Music</a></li>
-        							<li><a href="#">Toys</a></li>
-        							<li><a href="#">Hoodies</a></li>
-        						</ul>
-        					</aside> --}}
-        					{{-- <aside class="wedget__categories sidebar--banner">
-								<img src="/storage/images/others/banner_left.jpg" alt="banner images">
-								<div class="text">
-									<h2>new products</h2>
-									<h6>save up to <br> <strong>40%</strong>off</h6>
-								</div>
-        					</aside> --}}
         				</div>
         			</div>
         			<div class="col-lg-9 col-12 order-1 order-lg-2">
@@ -107,21 +62,10 @@
         					<div class="col-lg-12">
 								<div class="shop__list__wrapper d-flex flex-wrap flex-md-nowrap justify-content-between">
 									<div class="shop__list nav justify-content-center" role="tablist">
-			                            {{-- <a class="nav-item nav-link active" data-toggle="tab" href="#nav-grid" role="tab"><i class="fa fa-th"></i></a>
-			                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-list" role="tab"><i class="fa fa-list"></i></a> --}}
 			                        </div>
 			                        {{-- <p>Showing 1–12 of 40 results</p> --}}
 			                        <p>All the books are here.</p>
 			                        <div class="orderby__wrapper">
-			                        	{{-- <span>Sort By</span>
-			                        	<select class="shot__byselect">
-			                        		<option>Default sorting</option>
-			                        		<option>HeadPhone</option>
-			                        		<option>Furniture</option>
-			                        		<option>Jewellery</option>
-			                        		<option>Handmade</option>
-			                        		<option>Kids</option>
-			                        	</select> --}}
 			                        </div>
 		                        </div>
         					</div>
@@ -135,51 +79,12 @@
 												<div class="product__thumb">
 													<a class="first__img" href="{{route('books.view', $book->id)}}"><img src="/storage/images/books/1.jpg" alt="product image"></a>
 													<a class="second__img animation1" href="{{ route('books.view', $book->id) }}"><img src="{{url('storage/images/books/2.jpg')}}" alt="product image"></a>
-													{{-- <div class="hot__box">
-														<span class="hot-label">BEST SALLER</span>
-													</div> --}}
 												</div>
 												<div class="product__content content--center">
 													<h4><a href="{{ route('books.view', $book->id) }}">{{ $book->name }}</a></h4>
 													<ul class="prize d-flex">
 														<li>USD {{ number_format($book->price,2) }}</li>
-														{{-- <li class="old_prize">$35.00</li> --}}
 													</ul>
-													<div class="action">
-														<div class="actions_inner">
-															<ul class="add_to_links">
-																{{-- <li>
-																	<a class="cart" href="#">
-																		<i class="bi bi-shopping-bag4"></i>
-																	</a>
-																</li> --}}
-																<li>
-																	<a class="wishlist" href="/cart">
-																		<i class="bi bi-shopping-cart-full"></i>
-																	</a>
-																</li>
-																<li>
-																	<a class="compare" href="#">
-																		<i class="bi bi-heart-beat"></i>
-																	</a>
-																</li>
-																{{-- <li>
-																	<a class="quickview modal-view detail-link" href="#">
-																		<i class="bi bi-search"></i>
-																	</a>
-																</li> --}}
-															</ul>
-														</div>
-													</div>
-													{{-- <div class="product__hover--content">
-														<ul class="rating d-flex">
-															<li class="on"><i class="fa fa-star-o"></i></li>
-															<li class="on"><i class="fa fa-star-o"></i></li>
-															<li class="on"><i class="fa fa-star-o"></i></li>
-															<li><i class="fa fa-star-o"></i></li>
-															<li><i class="fa fa-star-o"></i></li>
-														</ul>
-													</div> --}}
 												</div>
 											</div>
 											<!-- End Single Product -->
@@ -193,39 +98,6 @@
 									</div>
 								</div>
 	        				</div>
-	        				{{-- <div class="shop-grid tab-pane fade" id="nav-list" role="tabpanel">
-	        					<div class="list__view__wrapper">
-	        						<!-- Start Single Product -->
-	        						<div class="list__view">
-	        							<div class="thumb">
-	        								<a class="first__img" href="/pages/single-product"><img src="/storage/images/product/1.jpg" alt="product images"></a>
-	        								<a class="second__img animation1" href="/pages/single-product"><img src="/storage/images/product/2.jpg" alt="product images"></a>
-	        							</div>
-	        							<div class="content">
-	        								<h2><a href="/pages/single-product">Ali Smith</a></h2>
-	        								<ul class="rating d-flex">
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li class="on"><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        									<li><i class="fa fa-star-o"></i></li>
-	        								</ul>
-	        								<ul class="prize__box">
-	        									<li>$111.00</li>
-	        									<li class="old__prize">$220.00</li>
-	        								</ul>
-	        								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-	        								<ul class="cart__action d-flex">
-	        									<li class="cart"><a href="/pages/cart">Add to cart</a></li>
-	        									<li class="wishlist"><a href="/pages/cart"></a></li>
-	        									<li class="compare"><a href="/pages/cart"></a></li>
-	        								</ul>
-
-	        							</div>
-	        						</div>
-	        					</div>
-	        				</div> --}}
         				</div>
         			</div>
         		</div>
